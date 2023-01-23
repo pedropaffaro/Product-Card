@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600&family=Lato:wght@300;400&display=swap');
+
+//Variables
+$background-color: #D9CDF7;
+$text-color: #271A45;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+    background-color: $background-color;
+
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+
+    *{
+        color: $text-color;
+        font-family: 'Lato', sans-serif;
+        line-height: 100%;
+    }
+
+    #app{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 63px;
+
+        #product-image{
+            position: relative;
+
+            button{
+                position: absolute;
+                right: 0;
+
+                background-color: transparent;
+                border: 0;
+
+                cursor: pointer;
+            }
+
+            & > img{
+                width: 449px;
+                height: 222px;
+                object-fit: cover;
+            }
+
+            
+        }
+    }
+
+    #product-details{
+        h4{
+            font-weight: 300;
+            font-size: 10px;
+        }
+    
+        h1{
+            font-family: 'Crimson Pro', serif;
+            font-weight: 600;
+            font-size: 32px;
+    
+            margin-top: 12px;
+        }
+    
+        p{
+            margin-top: 12px;
+            opacity: 67%;
+        }
+
+        button{
+            font-size: 12px;
+            line-height: 16px;
+
+            padding: 8px 16px;
+            border: .5px solid $text-color;
+            border-radius: 999px;
+
+            background-color: transparent;
+
+            margin-top: 20px;
+        }
+    }
+}
+
+#button-close, #animated-sofa{
+    display: none;
+}
+
+html.animated #button-360,
+html.animated #static-sofa{
+    display: none;
+}
+
+html.animated #button-close,
+html.animated #animated-sofa{
+    display: initial;
+}
